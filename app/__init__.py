@@ -1,0 +1,1 @@
+"""Edit magnitude calculation package."""

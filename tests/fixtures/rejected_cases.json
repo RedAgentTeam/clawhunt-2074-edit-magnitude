@@ -1,0 +1,4 @@
+[
+  {"name":"R01 rejected text draft","status":"rejected","kind":"text","draft":"虚构文本草案","final":"虚构文本定稿","expected_metrics":null},
+  {"name":"R02 rejected structured draft","status":"rejected","kind":"structured","draft":{"amount_cents":100},"final":{"amount_cents":200},"expected_metrics":null}
+]

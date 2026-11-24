@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edit-magnitude"
+version = "0.1.0"
+description = "Text and structured edit magnitude metrics with async event writeback"
+requires-python = ">=3.11"
+dependencies = [
+  "rapidfuzz>=3.6,<4",
+  "SQLAlchemy[asyncio]>=2.0,<3",
+  "pydantic>=2.0,<3",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8,<10",
+  "pytest-asyncio>=0.23,<2",
+  "aiosqlite>=0.19,<1",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*"]

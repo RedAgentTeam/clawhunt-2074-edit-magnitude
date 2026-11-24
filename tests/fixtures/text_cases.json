@@ -1,0 +1,16 @@
+[
+  {"name":"T01 exact unchanged","draft":"风起时","final":"风起时","options":{},"expected":{"edit_ratio":0.0,"grade":"unchanged","kept_sentence_ratio":1.0,"deleted_sentences":0,"added_sentences":0}},
+  {"name":"T02 ignored spaces and punctuation","draft":"甲， 乙！","final":"甲乙","options":{"ignore_whitespace":true},"expected":{"edit_ratio":0.0,"grade":"unchanged","kept_sentence_ratio":0.0,"deleted_sentences":1,"added_sentences":1}},
+  {"name":"T03 light boundary 0.1","draft":"abcdefghij","final":"abcdefghiX","options":{},"expected":{"edit_ratio":0.1,"grade":"light","kept_sentence_ratio":0.0,"deleted_sentences":1,"added_sentences":1}},
+  {"name":"T04 light substitution","draft":"abcdefghijklmnopqrst","final":"abcdefgXijklmnopqrst","options":{},"expected":{"edit_ratio":0.05,"grade":"light","kept_sentence_ratio":0.0,"deleted_sentences":1,"added_sentences":1}},
+  {"name":"T05 light insertion","draft":"abcdefghij","final":"abcdefghijX","options":{},"expected":{"edit_ratio":0.0909,"grade":"light","kept_sentence_ratio":0.0,"deleted_sentences":1,"added_sentences":1}},
+  {"name":"T06 medium boundary 0.4","draft":"abcde","final":"aXYde","options":{},"expected":{"edit_ratio":0.4,"grade":"medium","kept_sentence_ratio":0.0,"deleted_sentences":1,"added_sentences":1}},
+  {"name":"T07 medium two substitutions","draft":"abcdefghij","final":"abXdefghYj","options":{},"expected":{"edit_ratio":0.2,"grade":"medium","kept_sentence_ratio":0.0,"deleted_sentences":1,"added_sentences":1}},
+  {"name":"T08 medium three substitutions","draft":"abcdefghij","final":"aXYZefghij","options":{},"expected":{"edit_ratio":0.3,"grade":"medium","kept_sentence_ratio":0.0,"deleted_sentences":1,"added_sentences":1}},
+  {"name":"T09 rewrite ratio 0.6","draft":"abcde","final":"XYZde","options":{},"expected":{"edit_ratio":0.6,"grade":"rewrite","kept_sentence_ratio":0.0,"deleted_sentences":1,"added_sentences":1}},
+  {"name":"T10 rewrite ratio 0.8","draft":"abcde","final":"WXYZe","options":{},"expected":{"edit_ratio":0.8,"grade":"rewrite","kept_sentence_ratio":0.0,"deleted_sentences":1,"added_sentences":1}},
+  {"name":"T11 empty draft","draft":"","final":"三字","options":{},"expected":{"edit_ratio":1.0,"grade":"rewrite","kept_sentence_ratio":1.0,"deleted_sentences":0,"added_sentences":1}},
+  {"name":"T12 both empty","draft":"","final":"","options":{},"expected":{"edit_ratio":0.0,"grade":"unchanged","kept_sentence_ratio":1.0,"deleted_sentences":0,"added_sentences":0}},
+  {"name":"T13 Chinese and Latin mix","draft":"甲A乙B","final":"甲X乙B","options":{},"expected":{"edit_ratio":0.25,"grade":"medium","kept_sentence_ratio":0.0,"deleted_sentences":1,"added_sentences":1}},
+  {"name":"T14 retained and added sentences","draft":"甲。乙。","final":"甲。乙。丙。","options":{},"expected":{"edit_ratio":0.3333,"grade":"medium","kept_sentence_ratio":1.0,"deleted_sentences":0,"added_sentences":1}}
+]
